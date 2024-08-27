@@ -16,6 +16,9 @@ ingress:
     labels: {}
     host: 'sock-shop.oke.com' # FIXME:
     tlsSecretName: ''
+    paths:
+    - path: "/test"               # 기본 경로를 지정
+      pathType: Prefix  
 
 cartsdb:
     image:
