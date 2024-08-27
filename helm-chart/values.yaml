@@ -76,8 +76,8 @@ catalogue:
 frontend:
     replicas: 1
     image:
-        repo: weaveworksdemos/front-end
-        tag: 0.3.12
+        repo: harbor-core.common.svc.cluster.local/front-end-haho
+        tag: SNAPSHOT-56
     resources:
         limits:
             cpu: 300m
