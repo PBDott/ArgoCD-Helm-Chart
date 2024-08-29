@@ -74,7 +74,7 @@ frontend:
     replicas: 1
     image:
         repo: harbor.okestro.io/front-end-haho/haho
-        tag: SNAPSHOT-60
+        tag: SNAPSHOT-61
     resources:
         limits:
             cpu: 300m
