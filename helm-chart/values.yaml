@@ -73,7 +73,7 @@ catalogue:
 frontend:
     replicas: 1
     image:
-        repo: weaveworksdemos/front-end
+        repo: harbor.okestro.io/front-end
         tag: SNAPSHOT-60
     resources:
         limits:
