@@ -73,7 +73,7 @@ catalogue:
 frontend:
     replicas: 1
     image:
-        repo: harbor.okestro.io/front-end
+        repo: harbor.okestro.io/front-end-haho/haho
         tag: SNAPSHOT-60
     resources:
         limits:
