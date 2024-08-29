@@ -77,7 +77,7 @@ frontend:
     replicas: 1
     image:
         repo: harbor-core.common.svc.cluster.local/front-end-haho
-        tag: SNAPSHOT-56
+        tag: SNAPSHOT-60
     resources:
         limits:
             cpu: 300m
