@@ -73,7 +73,7 @@ catalogue:
 frontend:
     replicas: 1
     image:
-        repo: harbor-core.common.svc.cluster.local/front-end-haho
+        repo: weaveworksdemos/front-end
         tag: SNAPSHOT-60
     resources:
         limits:
