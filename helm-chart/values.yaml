@@ -15,10 +15,7 @@ ingress:
         kubernetes.io/ingress.class: nginx
     labels: {}
     host: 'sock-shop.oke.com' # FIXME:
-    tlsSecretName: ''
-    paths:
-    - path: "/test"               # 기본 경로를 지정
-      pathType: Prefix  
+    tlsSecretName: '' 
 
 cartsdb:
     image:
@@ -43,10 +40,10 @@ carts:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
 
 cataloguedb:
     image:
@@ -55,10 +52,10 @@ cataloguedb:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 200Mi
 
 catalogue:
     image:
@@ -95,10 +92,10 @@ loadtest:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 200Mi
 
 ordersdb:
     image:
@@ -123,10 +120,10 @@ orders:
     resources:
         limits:
             cpu: 500m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 200m
-            memory: 1000Mi
+            memory: 500Mi
 
 payment:
     image:
@@ -149,10 +146,10 @@ queuemaster:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
 
 rabbitmq:
     image:
@@ -189,10 +186,10 @@ shipping:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
 
 userdb:
     image:
@@ -201,10 +198,10 @@ userdb:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 200Mi
 
 user:
     image:
@@ -214,7 +211,7 @@ user:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 100m
             memory: 400Mi
@@ -226,10 +223,10 @@ zipkincron:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 200Mi
 
 zipkin:
     image:
@@ -238,10 +235,10 @@ zipkin:
     resources:
         limits:
             cpu: 300m
-            memory: 1000Mi
+            memory: 500Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 200Mi
     enabled:  false
     url: zipkin.zipkin.svc.cluster.local
 
@@ -250,6 +247,12 @@ zipkinmysql:
         repo: openzipkin/zipkin-mysql
         tag: 1.20.0
     resources:
+        requests:
+            memory: 256Mi
+            cpu: 250m
+        limits:
+            memory: 768Mi
+            cpu: 1
         requests:
             memory: 256Mi
             cpu: 250m
